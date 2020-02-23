@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package placingexceptionhandlersw2;
+package w2PlacingExceptionHandler;
 
+/**
+ *
+ * @author ASUS
+ */
 import java.util.Scanner;
 public class ParseInts
 {
@@ -17,8 +21,13 @@ public class ParseInts
         Scanner scanLine = new Scanner(scan.nextLine());
         while (scanLine.hasNext())
         {
-        val = Integer.parseInt(scanLine.next());
-        sum += val;
+            try{
+                val = Integer.parseInt(scanLine.next());
+            sum += val;
+            }
+            catch (Exception e){
+                
+            }
         }
         System.out.println("The sum of the integers on this line is " + sum);
     }
