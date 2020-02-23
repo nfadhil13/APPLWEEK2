@@ -65,16 +65,19 @@ public class PrimePanel extends JPanel
         {
             ans = " " + 2;
         count++;
-        for (int i = 3; i <= num; i += 2)
+         for (int i = 3; i <= num; i += 2)
         {
             boolean foundDivisor = false;
             int j = 3;
-            while (j < i && !foundDivisor && j%i!=0)
+            while (j <=Math.sqrt(i) && !foundDivisor)
             {
+                if (i % j == 0 )
+                    foundDivisor = true;
+                else
                     j++;
             }
             // Add i to the list if it is prime
-            if (j == i)
+            if (!foundDivisor)
             {
                 ans += " " + i;
                 count++;
